@@ -10,10 +10,13 @@
 
   <body>
     <div class="container">
-      <% if current_user %><p class="text-center alert">signed in as: <%= current_user.first_name %></p><% end%>
-
-      <h1 class="text-center">Devise Playground</h1>
-      <%= yield %>
-    </div>
+	<div class="layouts/row">
+		<div class="col-md-12">
+			<%= render 'layouts/nav' %>
+      <p> <span class="alert"><%= notice %></span><span class="alert"><%= alert %></span></p>
+			<%= yield %>
+		</div>
+	</div>
+</div>
   </body>
 </html>
