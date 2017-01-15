@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <% if current_user %><p class="text-center alert">signed in as: <%= current_user.first_name %></p><% end%>
+
+      <h1 class="text-center">Devise Playground</h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

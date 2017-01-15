@@ -1,0 +1,10 @@
+<h3 class="text-center">Posts Index Page</h3>
+
+<% @posts.each do |post| %>
+<div class="well">
+<h4><%= post.title %></h4>
+<p><%= post.content %></p>
+</div>
+<% end %>
+
+<%= link_to "Sign out", destroy_user_session_path, method: "delete"  %>
